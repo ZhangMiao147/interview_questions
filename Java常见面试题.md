@@ -38,11 +38,6 @@
 2. MVP
 3. MVVM
 
-## 网络连接
-1. HttpClient
-2. HttpUrlConnetion
-3. socket
-
 ## 虚拟机
 1. 垃圾回收机制？有哪些对象可以作为 GC roots?
 2. 跟 Art、Dalvik 对比
