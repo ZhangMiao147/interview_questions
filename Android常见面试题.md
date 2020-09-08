@@ -3,16 +3,34 @@
 ## 四大组件
 #### Activity
 1. onNewIntent()的调用时机
+
 2. 启动模式
+
 3. Activity 的内部机制
+
 4. Activity 的冷启动流程
+
 5. AMS 的作用
+
 6. a-b-c界面，其中b是singleinstance的，那么c界面点back返回a界面，为什么？怎么管理栈的？\
+
 7. 在oncreate里面可以得到view的宽高吗？
+
 8. 从framework 的角度将 activity 的启动流程（冷启动）
+
 9. 为什么要 引入 activity 这个组件？
+
 10. a启动b，b启动c,怎么样可以在c界面点back返回到a？
+
 11. 在 SingleTop 模式中，如果打开一个已经存在栈顶的 Activity，他的生命流程是怎样的？ onPause() -> onNewIntent() -> onResume()
+
+12. ActivityA -> Activity B -> Activity A ，Activity A 启动模式为 singleTask ，Activity B 启动模式为常规模式，问  A 启动 B，B 又启动 A 的生命周期调用顺序？
+
+    启动 A：A onCreate() -> A onStart() -> A onResume()
+
+    A 启动 B：A onPause() -> B onCreate() -> B onStart() -> B onResume() -> A onStop()
+
+    B 又启动 A：B onPause() -> A onNewIntent() -> A onRestart() -> A onStart() -> A onResume() -> B onStop() -> B onDestory() 
 
 #### BroadcastReceive
 1. 广播有几种？广播是观察者模式？跨进程广播也是观察者模式吗？
